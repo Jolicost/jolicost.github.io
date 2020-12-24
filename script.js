@@ -974,7 +974,7 @@ function getMapRoutePoints(origin, dest, callBack) {
 }
 
 function requestRoute(startLat, startLon, endLat, endLon, callBack) {
-    fetch('http://router.project-osrm.org/route/v1/driving/{1},{0};{3},{2}?alternatives=false&steps=true&geometries=polyline&overview=false&annotations=false'.format(startLat,startLon, endLat, endLon))
+    fetch('https://router.project-osrm.org/route/v1/driving/{1},{0};{3},{2}?alternatives=false&steps=true&geometries=polyline&overview=false&annotations=false'.format(startLat,startLon, endLat, endLon))
     .then(response => {
         response.json().then(data => {
             callBack(data.routes[0].legs[0].steps.flatMap(step => {
