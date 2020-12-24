@@ -449,9 +449,7 @@ function ImpactChart(data, selector) {
         })
         .attr("transform","translate({2},{3}), rotate(90,{0},{1})".format(carWidth/2, carWidth/2, carX, carY));
      
-    var elem = document.getElementById("vehicle_impact_svg");
-    SVGInject(elem);
-        
+
     svg.selectAll('circle')
         .data(data)
         .enter()

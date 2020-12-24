@@ -212,3 +212,8 @@ svg[selected="false"] {
         display:none;
     }
 }
+
+p#footer-text {
+    font-size:12px;   
+    text-align: center;
+}
