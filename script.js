@@ -238,8 +238,8 @@ function RenderPopupPieChart(parent_elem, data) {
 function barPlotVertical(data, selector) {
     // set the dimensions and margins of the graph
     var margin = {top: 30, right: 30, bottom: 70, left: 60},
-        width = 460 - margin.left - margin.right,
-        height = 400 - margin.top - margin.bottom;
+        width = 624 - margin.left - margin.right,
+        height = 624 - margin.top - margin.bottom;
 
     // append the svg object to the body of the page
     var svg = d3.select(selector)
@@ -1130,12 +1130,47 @@ function hideLegend() {
     closedLegend = true;
 }
 
+function posY(elm) {
+    var test = elm, top = 0;
+
+    while(!!test && test.tagName.toLowerCase() !== "body") {
+        top += test.offsetTop;
+        test = test.offsetParent;
+    }
+
+    return top;
+}
+
+function viewPortHeight() {
+    var de = document.documentElement;
+
+    if(!!window.innerWidth)
+    { return window.innerHeight; }
+    else if( de && !isNaN(de.clientHeight) )
+    { return de.clientHeight; }
+
+    return 0;
+}
+
+function scrollY() {
+    if( window.pageYOffset ) { return window.pageYOffset; }
+    return Math.max(document.documentElement.scrollTop, document.body.scrollTop);
+}
+
+function checkvisible( elm ) {
+    var vpH = viewPortHeight(), // Viewport Height
+        st = scrollY(), // Scroll Top
+        y = posY(elm);
+
+    return (y > (vpH + st));
+}
+
 function hideLegendOnScroll() {
     window.onscroll = function() {
         if (closedLegend) return;
         
         const scroll = document.body.scrollTop;
-        if (scroll > 2500) {
+        if (!checkvisible(document.getElementById("map_container"))) {
             document.getElementById("legend").style.display = "none";
         } else {
             document.getElementById("legend").style.display = "block";

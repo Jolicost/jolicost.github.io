@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Which accidents are serious or fatal on England?</title>
+	<title>Which traffic accidents are serious or fatal in England?</title>
 	<meta name="description" content="United Kingdom accidents (2010-2014) visualization">
 	<meta name="author" content="Jolivaco">
 
@@ -54,45 +54,52 @@
         <b id="popup_class_name">Class name</b>
     </div>
 	<div id="container">
-		<h1>Which accidents are serious or fatal?</h1>
-		<p>Not every accident ends up being fatal or serious. Knowing the most important factors can be determining in order to prevent a major accident.</p>
-		<p>This visualization makes use of the data published by the department of transport of the United Kingdom. The data comphrends the accidents from the 2010 to 2014 period.</p>
-		<p>There was a total of <b id="total_accidents">100000</b> accidents. Out of these, <b id="major_accidents_total">50000</b> were considered major (they resulted in fatal or serious consequences).</p>
-		<p>This means that <b id="major_percent">33%</b> of the accidents were considered major. This metric will be known as <b>severity index</b> from now on.</p>
-		<p>Now, let's try to compare the severity index between <b>motorcycles</b> and <b>4-wheelers</b>. Which vehicle category is more dangerous?</p>
+        <div class="text_wrapper">
+            <h1>Which traffic accidents are serious or fatal in England?</h1>
+            <p>Not every traffic accident ends up being fatal or serious. Knowing the most important factors can be decisive to prevent a major accident.</p>
+            <p>This visualization makes use of the data published by the department of transport of the United Kingdom. The data includes the accidents from the 2010 to 2014 period.</p>
+            <p>There was a total of <b id="total_accidents">100000</b> accidents. Out of these, <b id="major_accidents_total">50000</b> were considered major (they resulted in fatal or serious consequences).</p>
+            <p>This means that <b id="major_percent">33%</b> of the accidents were considered major. This metric will be known as <b>severity index</b> from now on.</p>
+            <p>You can visualize how this index helps to determine which factors are more dangerous than others. Try to compare the severity index between <b>motorcycles</b> and <b>4-wheelers</b> vehicle categories. Which vehicle category do you think is more dangerous?</p>
+        </div>
 		<div id="plot_vehiclecategory">
 			<div id="VehicleCategoryViz"></div>
 		</div>
-		<p>What can you do as a driver to prevent this kind of accidents? There are <b>four</b> crucial factors that influence the severity of an accident.</p>
-		<p>These factors are, the <b>type of the vehicle</b> as we just saw, <b>the maneuver</b> taken by the vehicle during the accident, the <b>type of intersaction</b> where the accident took place, and the <b>point of impact</b> of the vehicle.</p>
-        <p>Let's take a look at these three last factors. Which ones are the most dangerous?</p>
+        <div class="text_wrapper">
+            <p>Exactly, <b>motorcycle</b> accidents are way more dangerous than all the other kinds of vehicles. The main reason is the lack of protection and security measures.</p>
+            <p>What can you do as a driver to prevent this kind of accidents? There are <b>four</b> crucial factors that influence the severity of an accident.</p>
+            <p>These factors are, the <b>type of the vehicle</b> as we just saw, <b>the manoeuvre</b> taken by the vehicle during the accident, the <b>type of intersection</b> where the accident took place, and the <b>point of impact</b> of the vehicle.</p>
+            <p>Let's take a look at these three last factors. Which ones are the most dangerous?</p>
+        </div>
 		<div id="maneuver_intersection_container">
 			<div id="plot_maneuver">
-				<h2>Maneuver</h2>
-                <p>The maneuver is the second most important factor that leads to major accidents. Overtaking is the most dangerous maneuver.</p>
+				<h2>Manoeuvre</h2>
+                <p>The manoeuvre is the second most important factor that leads to major accidents. Overtaking is the most dangerous manoeuvre.</p>
 				<div id="VehicleManoeuverViz"></div>
 			</div>
 			<div id="plot_intersection">
 				<h2>Intersection</h2>
-                <p>The intersection type follows the maneuver. In this case, a straight road is the most dangerous. You guessed right, that's where most overtaking manoeuvers are performed.</p>
+                <p>The intersection type follows the manoeuvre. In this case, a straight road is the most dangerous.</p>
 				<div id="IntersectionViz"></div>
 			</div>
 		</div>
 		<div id="plot_impactpoint">
 			<h2>Point of impact</h2>
-            <p>Last but not least, the impact point of the accident also matters. Major accidents tend to happen without any kind of impact with another vehicle. On the other way, when the vehicle impacts on its back, the accident is way less harmful</p>
+            <p>Finally, the impact point of the accident also matters. Major accidents tend to happen without any kind of impact with another vehicle. In the other way, when the vehicle impacts on its back, the accident is way less harmful.</p>
 			<div id="ImpactViz">
             </div>
 		</div>
-		<p>However, your personal situation matters. The severity of the accidents also depends on another factors which are not directly related to the <b>road</b>.</p>
-		<p>Use the following filters to <b>select your personal case</b> and find out which factors become more important.</p>
+        <div class="text_wrapper">
+            <p>However, your personal situation matters. The severity of the accidents also depends on other factors which are not directly related to the <b>road</b>.</p>
+            <p>Use the following filters to <b>select your personal case</b> and find out which manoeuvres, intersections and impact points become more relevant.</p>
+        </div>
 		<div id="filters_container">
 			<div id="plot_hour">
 				<h2>Hour</h2>
                 <div id="hour_am_viz"></div>
 				<div id="hour_pm_viz"></div>
 			</div>
-			<<div id="plot_weekday">
+			<div id="plot_weekday">
 				<h2>Weekday</h2>
 				<div id="WeekdayViz"></div>
 			</div>
@@ -128,7 +135,9 @@
             <button class="carviz_btn" onclick="resetFilters();">Reset filters</button>
             <button class="carviz_btn" onclick="window.location.href='#maneuver_intersection_container'">Back to top</button>
         </div>
-		<p>Finally, you should observe where did major accidents happen. Try to input a <b>route</b> between two places on England and check out the location and details of the major accidents that happened in the path.</p>
+        <div class="text_wrapper">
+            <p>Finally, you should observe <b>where did major accidents</b> happen. Try to input a <b>route</b> between two places in England and check out the location and details of the major accidents that happened in the path.</p>
+        </div>
 		<div id="map_container">
 			<div id="map_input">
 				<div id="map_input_placeholder">

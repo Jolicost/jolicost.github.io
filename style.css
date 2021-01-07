@@ -44,12 +44,12 @@ div#filters_container {
 
 div#map_container > div {
 	margin:auto;
-	float:left;
+	max-width:936px;
 }
 
-div#map_container {
-    overflow: hidden;    
-}
+/* div#map_container { */
+    /* overflow: hidden;     */
+/* } */
 
 div#map_input {
 	width:416px;
@@ -74,7 +74,7 @@ div#map_input_placeholder input {
 	border: solid;
 	border-radius: 5px;
 	height:30px;
-	width: 300px;
+	width: 100%;
 	border-width:1px;
 	margin-left:8px;
 }
@@ -159,9 +159,10 @@ svg[selected="false"] {
 }
 
 #input_submit_btn {
-    margin-left: 208px;
+    margin-left: 30%;
+    margin-right:30%;
     margin-top: 20px;
-    width: 100px; 
+    width: 40%; 
 }
 
 .carviz_btn {
@@ -216,4 +217,21 @@ svg[selected="false"] {
 p#footer-text {
     font-size:12px;   
     text-align: center;
+}
+
+div.text_wrapper {
+    max-width: 936px;
+    margin:auto;
+}
+
+div#filters_actions_div {
+    max-width: 312px;
+    margin:auto;
+    padding-left:10%;
+    margin-top:50px;
+    margin-bottom:50px;
+}
+
+div#map {
+    margin-top:50px !important;   
 }
