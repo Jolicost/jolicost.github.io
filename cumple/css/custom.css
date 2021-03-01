@@ -1,0 +1,49 @@
+div.character-disabled img {
+    filter: grayscale(100%);
+}
+
+div.character-disabled h2 {
+    text-decoration: line-through;
+}
+
+div.super-done h2 {
+    text-decoration: line-through;
+}
+
+div.super-disabled img {
+    filter: grayscale(100%);
+}
+
+.checked {
+    text-decoration: line-through;
+}
+
+.locked img {
+    filter: grayscale(100%);
+}
+
+#personatges-template img {
+    width: 300px;
+    height: 300px;
+}
+
+#supermercats-template img {
+    width: 150px;
+    height:150px;
+}
+
+.image-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}   
+
+div#marcador {
+    position: fixed;
+    bottom: 0;
+    left:30px;
+    width: 100%;
+    height:50px;
+    z-index:999;
+}
