@@ -3,7 +3,7 @@ var dades = {
         {
             "nom":"Aldi",
             "img-url":"images/supers/aldi.png",
-            "unlock":25
+            "unlock":50
         },
         {
             "nom":"BonÀrea",
@@ -22,6 +22,11 @@ var dades = {
         {
             "nom":"Carrefour",
             "img-url":"images/supers/carrefour.png",
+        },
+        {
+            "nom":"Carrefour 2",
+            "img-url":"images/supers/carrefour.png",
+            "unlock":180
         },
         {
             "nom":"Charter",
@@ -45,6 +50,11 @@ var dades = {
             "nom":"Lidl",
             "img-url":"images/supers/lidl.png",
             "unlock":65
+        },
+        {
+            "nom":"Lidl 2",
+            "img-url":"images/supers/lidl.png",
+            "unlock":200
         },
         {
             "nom":"Mercadona",
@@ -103,7 +113,7 @@ var dades = {
             "habilitats": [
                 "Camina amb desgana.",
                 "Sempre arriba l’últim a la caixa.",
-                "No pot carregar més d’un quilo."
+                "No pot seleccionar productes de més d’un quilo."
             ]
         },
         {
@@ -114,7 +124,7 @@ var dades = {
             "habilitats": [
                 "Paga sempre i únicament amb bitllets de 10.",
                 "Deixa sempre 1 cosa a caixa perquè no li arriben els calés.",
-                "Qualsevol producte que compri serà la marca més barata."
+                "Només pot seleccionar els productes més barats."
             ]
         },
         {
@@ -136,7 +146,7 @@ var dades = {
             "habilitats": [
                 "Va al super amb xancletes i mitjons.",
                 "Porta ulleres de sol.",
-                "Només compra productes fabricats a la seva terra (alemanya, suïssa o països baixos, triar nacionalitat)"
+                "Només pot mirar productes fabricats a la seva terra (regne unit, alemanya, suïssa,o països baixos)"
             ]
         },
         {
@@ -153,6 +163,7 @@ var dades = {
         },
         {
             "nom": "Influencer", 
+            "unlock":70,
             "img-url": "images/personatges/influencer.jpg",
             "desc": "La influencer es una estrella d'instagram i necessita cridar l'atenció per sobreviure.",
             "hab-lost":-1,
@@ -168,9 +179,9 @@ var dades = {
             "desc": "Com estalviar en la teva compra pel preu d'una gastrointeritis.",
             "hab-lost":-1,
             "habilitats": [
-                "Només compra productes caducats o a punt de caducar (màxim 1 mes).",
+                "Només pot seleccionar productes caducats o a punt de caducar (màxim 1 mes).",
                 "Apareix al super 15 minuts abans de que tanqui.",
-                "No compra carn perquè diu que es vegana. Però pot comprar aliments que continguin carn de forma indirecta."
+                "Diu que és vegana, així que pot mirar qualsevol producte que porti carn (independentment de la caducitat). No pot mirar les verdures."
             ]
         },
         {
@@ -201,7 +212,7 @@ var dades = {
             "desc": "Adora els sers vius encara que el seu pare tingui un escorxador.",
             "hab-lost":-2,
             "habilitats": [
-                "Només pot comprar productes orgànics i bio.",
+                "Només pot mirar productes orgànics i bio.",
                 "Si ha de comprar carn, pregunta a la caixera si els animals han sigut feliços.",
                 "Sempre riu, per algun motiu desconegut (al·lucinògens)."
             ]
@@ -214,7 +225,7 @@ var dades = {
             "habilitats": [
                 "Es mira totes les etiquetes de les coses que agafa i diu en veu alta les calories.",
                 "No pot entrar al passadís de les patates fregides, la brioixeria, l’alcohol, els gelats ni les xocolates ni xuxes.",
-                "Quan passa els productes per caixa, pregunta una vegada si un article porta gluten."
+                "No pot seleccionar cap producte que porti gluten."
             ]
         },
         {
@@ -223,9 +234,9 @@ var dades = {
             "desc": "El tete es una espècie d'animal que conviu amb els sers humans. Ningú coneix com es reprodueixen tan ràpid.",
             "hab-lost":-3,
             "habilitats": [
-                "Només pot entrar als passadissos on hi han pizzes, cerveses i patates fregides.",
+                "Només pot entrar als passadissos on hi han pizzes, cerveses, patates fregides, gelats... res sa.",
                 "Si es creua amb un altre tete ha de dir la paraula “tete” ni que sigui enmascarada en una altra paraula.",
-                "No pot comprar res superior a 5 euros."
+                "No pot seleccionar res superior a 5 euros."
             ]
         },
         {
@@ -255,9 +266,10 @@ var dades = {
             "nom": "Youtuber", 
             "img-url": "images/personatges/youtuber.jpg",
             "desc": "El youtuber no es desenganxa mai de les plataformes de streaming i sempre vol més suscriptors",
+            "unlock":25,
             "hab-lost":-3,
             "habilitats": [
-                "Graba tota la visita al super amb mòbil.",
+                "Graba tota la visita al super amb mòbil i fa reviews del que agafa.",
                 "Porta gorra.",
                 "El youtuber sempre demana likes davant les pizzes congelades."
             ]
@@ -268,25 +280,421 @@ var dades = {
             "nom":"Nivell fàcil",
             "reptes":[
                 {
-                    "desc":"fes el pi",
-                    "points": 40
+                    "desc": "Agafa 10 bosses o més de verdures i quedateles.",
+                    "points": 6
                 },
                 {
-                    "desc":"fes el pi",
-                    "points": 40
-                }   
+                    "desc": "Agafa un ticket de la peixateria.",
+                    "points": 4
+                },
+                {
+                    "desc": "Agafa una funda de paraigües de plàstic.",
+                    "points": 4
+                },
+                {
+                    "desc": "Entra al super amb una bossa de roba/plàstic del mateix super",
+                    "points": 5
+                },
+                {
+                    "desc": "Entra al super amb una bossa de roba/plàstic d’un super diferent.",
+                    "points": 4
+                },
+                {
+                    "desc": "Fes la ola davant de les catisfactions.",
+                    "points": 5
+                },
+                {
+                    "desc": "Fes una dansa de la felicitat en el passadís dels cereals. (mínim 5 segons).",
+                    "points": 7
+                },
+                {
+                    "desc": "Localitza un personatge del llistat de personatges que no sigui el normal.",
+                    "points": 6
+                },
+                {
+                    "desc": "Localitza una oferta 2x1.",
+                    "points": 4
+                },
+                {
+                    "desc": "Localitza una oferta 3x2.",
+                    "points": 4
+                },
+                {
+                    "desc": "Menja’t una xuxe davant de la fruita.",
+                    "points": 5
+                },
+                {
+                    "desc": "Obre una porta dels congelats sense fer contacte.",
+                    "points": 6
+                },
+                {
+                    "desc": "Plora davant de la ceba",
+                    "points": 6
+                },
+                {
+                    "desc": "Treu una fanta de taronja que formi part d’un pack 2x1 i passa-la per caixa.",
+                    "points": 7
+                },
+                {
+                    "desc": "Troba 400 g de nabius.",
+                    "points": 5
+                },
+                {
+                    "desc": "Troba M&M’s",
+                    "points": 5
+                },
+                {
+                    "desc": "Troba Pringles sabor pizza",
+                    "points": 6
+                },
+                {
+                    "desc": "Troba amanida florette.",
+                    "points": 5
+                },
+                {
+                    "desc": "Troba bebida de soja con sabor chocolate.",
+                    "points": 7
+                },
+                {
+                    "desc": "Troba bitter kas.",
+                    "points": 5
+                },
+                {
+                    "desc": "Troba bolquers de 72 unitats o més.",
+                    "points": 6
+                },
+                {
+                    "desc": "Troba cibulé.",
+                    "points": 5
+                },
+                {
+                    "desc": "Troba colonia nenuco",
+                    "points": 4
+                },
+                {
+                    "desc": "Troba esbergínia a més de 1.5 el kilo.",
+                    "points": 6
+                },
+                {
+                    "desc": "Troba fideuà preparada.",
+                    "points": 6
+                },
+                {
+                    "desc": "Troba ginebra puerto de indias.",
+                    "points": 7
+                },
+                {
+                    "desc": "Troba haagen dazs sabor cheesecake.",
+                    "points": 6
+                },
+                {
+                    "desc": "Troba hamburguesa de conill",
+                    "points": 6
+                },
+                {
+                    "desc": "Troba maizena.",
+                    "points": 4
+                },
+                {
+                    "desc": "Troba mantega del cadí.",
+                    "points": 6
+                },
+                {
+                    "desc": "Troba mini cereals (25 gr).",
+                    "points": 7
+                },
+                {
+                    "desc": "Troba mini mandonguilles.",
+                    "points": 6
+                },
+                {
+                    "desc": "Troba mochis.",
+                    "points": 5
+                },
+                {
+                    "desc": "Troba paella de marisc congelada.",
+                    "points": 4
+                },
+                {
+                    "desc": "Troba pasta de gyoza congelada",
+                    "points": 6
+                },
+                {
+                    "desc": "Troba pasta penne.",
+                    "points": 6
+                },
+                {
+                    "desc": "Troba qualsevol moneda al terra d’un supermercat (no cal agafar-la).",
+                    "points": 7
+                },
+                {
+                    "desc": "Troba safrà",
+                    "points": 5
+                },
+                {
+                    "desc": "Troba salsa tàrtara.",
+                    "points": 5
+                },
+                {
+                    "desc": "Troba sangria don simon.",
+                    "points": 5
+                },
+                {
+                    "desc": "Troba sorra de gat de 10 KG",
+                    "points": 7
+                },
+                {
+                    "desc": "Troba sunny delight.",
+                    "points": 6
+                },
+                {
+                    "desc": "Troba tint de cabell de color borgonya.",
+                    "points": 7
+                },
+                {
+                    "desc": "Troba un Iogurt de mig kilo.",
+                    "points": 6
+                },
+                {
+                    "desc": "Troba un article amb un preu per L major que 45 eur.",
+                    "points": 7
+                },
+                {
+                    "desc": "Troba un article amb un preu per kg major que 45 eur.",
+                    "points": 7
+                },
+                {
+                    "desc": "Troba un article de frozen II.",
+                    "points": 5
+                },
+                {
+                    "desc": "Troba un carro (no pot ser teu) amb una ampolla de vi o cava.",
+                    "points": 5
+                },
+                {
+                    "desc": "Troba un croissant del jaume i vicenç.",
+                    "points": 5
+                },
+                {
+                    "desc": "Troba un maxi pavo (rotllo pavo 500 gr).",
+                    "points": 5
+                },
+                {
+                    "desc": "Troba un mini haagen dazs.",
+                    "points": 5
+                },
+                {
+                    "desc": "Troba un paquet de 1 KG de pasta.",
+                    "points": 5
+                },
+                {
+                    "desc": "Troba un paquet de llet a menys de 70 céntims el litro.",
+                    "points": 5
+                },
+                {
+                    "desc": "Troba un producte a menys de 0.2 euros el litre. ",
+                    "points": 5
+                },
+                {
+                    "desc": "Troba un producte a menys de 1 euro el kilo.",
+                    "points": 5
+                },
+                {
+                    "desc": "Troba un producte del forn amb un sol article restant.",
+                    "points": 5
+                },
+                {
+                    "desc": "Troba un ticket de super al terra (no cal agafar-lo).",
+                    "points": 5
+                },
+                {
+                    "desc": "Troba una Barra de pa a més de 1 euro.",
+                    "points": 6
+                },
+                {
+                    "desc": "Troba una caixa de cereals a més de 3 eur",
+                    "points": 5
+                },
+                {
+                    "desc": "Troba una Fanta de maracuya",
+                    "points": 7
+                },
+                {
+                    "desc": "Troba una bossa de patates fregides mini (20 grams).",
+                    "points": 5
+                },
+                {
+                    "desc": "Troba una burger vegana.",
+                    "points": 4
+                },
+                {
+                    "desc": "Troba una burger vegetariana.",
+                    "points": 4
+                },
+                {
+                    "desc": "Troba una cervesa fabricada a Igualada.",
+                    "points": 8
+                },
+                {
+                    "desc": "Troba una especie a més de 3 euros",
+                    "points": 5
+                },
+                {
+                    "desc": "Troba una fanta de 50cl.",
+                    "points": 4
+                },
+                {
+                    "desc": "Troba una fruita a punt de podrir-se.",
+                    "points": 7
+                },
+                {
+                    "desc": "Troba una garrafa d'aigua a més de 2 euros.",
+                    "points": 4
+                },
+                {
+                    "desc": "Troba una oferta del segon producte al -60% com a mínim.",
+                    "points": 5
+                },
+                {
+                    "desc": "Troba una revista del corazón.",
+                    "points": 4
+                },
+                {
+                    "desc": "Troba una safata de shitake (sense mescles)",
+                    "points": 5
+                },
+                {
+                    "desc": "Troba una salsa barbacoa de més de 2 euros.",
+                    "points": 5
+                },
+                {
+                    "desc": "Troba unes patates fregides a més de 2 euros la bossa.",
+                    "points": 5
+                },
+                {
+                    "desc": "Troba xocolata de 90% de cacao o més",
+                    "points": 4
+                }  
             ]
         },
         {
             "nom":"Nivell mitjà",
             "reptes":[
                 {
-                    "desc":"fes el pi",
-                    "points": 40
+                    "desc": "Deixa escrit en un paper sota un article: si llegeixes això és que toca repostar",
+                    "points": 16
                 },
                 {
-                    "desc":"fes el pi",
-                    "points": 40
+                    "desc": "Demana 2 bosses a caixa tot i només haver comprat 1 article. Agafa les 2 bosses amb una mà i l'article amb l'altre al sortir.",
+                    "points": 14
+                },
+                {
+                    "desc": "Fes el saludo nipon davant de la parada de sushi.",
+                    "points": 14
+                },
+                {
+                    "desc": "Fes la dansa de la felicitat davant d’una càmera de vigilància (mínim 5 segons).",
+                    "points": 17
+                },
+                {
+                    "desc": "Fes que algú t’obri la porta d’una nevera i agafa un article de dins (després es pot deixar)",
+                    "points": 17
+                },
+                {
+                    "desc": "Intenta passar per una caixa que està tancada i que la caixera et digui que està tancada.",
+                    "points": 16
+                },
+                {
+                    "desc": "Carrega 10 garrafes de 5L a un carro i fes una volta completa a un passadís.",
+                    "points": 17
+                },
+                {
+                    "desc": "Obre una porta dels congelats sense fer contacte utilitzant un producte del mateix super (després el pots deixar)",
+                    "points": 13
+                },
+                {
+                    "desc": "Paga un article amb 1 cèntim de mes i digues: queda't el canvi.",
+                    "points": 16
+                },
+                {
+                    "desc": "Parla-li a la caixera utilitzant el seu nom de pila.",
+                    "points": 17
+                },
+                {
+                    "desc": "Pregunta a un dependent sobre un producte i que et respongui que no en tenen / no sap ni en tenen en el supermercat.",
+                    "points": 15
+                },
+                {
+                    "desc": "Sigues la primera en agafar un article del forn just després de fer replenament.",
+                    "points": 16
+                },
+                {
+                    "desc": "Troba bebida de avellanas.",
+                    "points": 15
+                },
+                {
+                    "desc": "Troba cuixes de granota.",
+                    "points": 15
+                },
+                {
+                    "desc": "Troba pasta de llenties vermelles.",
+                    "points": 15
+                },
+                {
+                    "desc": "Troba tofu bio.",
+                    "points": 15
+                },
+                {
+                    "desc": "Troba un article amb data de caducitat dins de la setmana entrant.",
+                    "points": 18
+                },
+                {
+                    "desc": "Troba un article ja obert.",
+                    "points": 16
+                },
+                {
+                    "desc": "Troba un personatge igual que el teu a dins d’un supermercat.",
+                    "points": 15
+                },
+                {
+                    "desc": "Troba un producte a kilòmetre zero.",
+                    "points": 14
+                },
+                {
+                    "desc": "Troba un producte amb més de 700 calories per 100g.",
+                    "points": 17
+                },
+                {
+                    "desc": "Troba un producte etiquetat amb català.",
+                    "points": 13
+                },
+                {
+                    "desc": "Troba un producte etiquetat en marroquí.",
+                    "points": 16
+                },
+                {
+                    "desc": "Troba un producte etiquetat en xinès. ",
+                    "points": 17
+                },
+                {
+                    "desc": "Troba un producte fabricat a Alemanya.",
+                    "points": 16
+                },
+                {
+                    "desc": "Troba un sabó que mata el 99% de les bactèries.",
+                    "points": 14
+                },
+                {
+                    "desc": "Troba un vi de més de 15 euros per litre.",
+                    "points": 16
+                },
+                {
+                    "desc": "Troba una etiqueta de preu d’article al terra.",
+                    "points": 14
+                },
+                {
+                    "desc": "Troba white cookies i vengat del xavi.",
+                    "points": 14
                 }   
             ]
         },
@@ -294,13 +702,69 @@ var dades = {
             "nom":"Nivell difícil",
             "reptes":[
                 {
-                    "desc":"fes el pi",
+                    "desc": "Aconsegueix que ens preguntin per ensenyar la bossa al sortir d’un super sense haver comprat res.",
                     "points": 40
                 },
                 {
-                    "desc":"fes el pi",
+                    "desc": "Aconsegueix que et regalin un article al passar per caixa d’algun supermercat.",
                     "points": 40
-                }   
+                },
+                {
+                    "desc": "Cola un article del forn sense pagar per ell en una bossa que passis per caixa.",
+                    "points": 40
+                },
+                {
+                    "desc": "Dóna'li a la caixera una targeta de client d’un altre super.",
+                    "points": 35
+                },
+                {
+                    "desc": "Pesa una bossa de fruita d’exactament 777 grams. Després deixa al seu lloc les coses que hi hagin dins.",
+                    "points": 40
+                },
+                {
+                    "desc": "Pregunta a un treballador quin és el passadís més maco.",
+                    "points": 35
+                },
+                {
+                    "desc": "Pregunta a una persona que no sigui empleat si sap on són els formatges frescos.",
+                    "points": 40
+                },
+                {
+                    "desc": "Pregunta si el sushi està fresc en japonés a un treballador de la parada de sushi.",
+                    "points": 35
+                },
+                {
+                    "desc": "Segueix una persona amb un carret i agafa tot el que ell agafi durant 3 cops.",
+                    "points": 45
+                },
+                {
+                    "desc": "Troba un article caducat.",
+                    "points": 40
+                },
+                {
+                    "desc": "Troba un article patrocinat per un famós (a l'envàs surt el seu nom).",
+                    "points": 35
+                },
+                {
+                    "desc": "Troba un article que costi més de 50 eur",
+                    "points": 35
+                },
+                {
+                    "desc": "Troba un empleat amb un tatuatge.",
+                    "points": 35
+                },
+                {
+                    "desc": "Troba una kozel.",
+                    "points": 50
+                },
+                {
+                    "desc": "Ves pel super amb 2 carros de supermercat i només compra 2 articles, un a cada carro.",
+                    "points": 30
+                },
+                {
+                    "desc": "Fica almenys 2 articles comprats a una bossa de brossa davant la caixera.",
+                    "points": 35
+                }                 
             ]
         }      
     ]
