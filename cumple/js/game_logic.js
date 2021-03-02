@@ -581,7 +581,7 @@ var dades = {
             "nom":"Nivell mitjà",
             "reptes":[
                 {
-                    "desc": "Deixa escrit en un paper sota un article: si llegeixes això és que toca repostar",
+                    "desc": "Deixa escrit en un paper sota un article: si pots llegir això toca repostar",
                     "points": 16
                 },
                 {
