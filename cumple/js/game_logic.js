@@ -352,6 +352,10 @@ var dades = {
                     "points": 5
                 },
                 {
+                    "desc": "Troba arròs de sushi",
+                    "points": 6
+                },
+                {
                     "desc": "Troba bebida de soja con sabor chocolate.",
                     "points": 7
                 },
@@ -414,10 +418,6 @@ var dades = {
                 {
                     "desc": "Troba paella de marisc congelada.",
                     "points": 4
-                },
-                {
-                    "desc": "Troba pasta de gyoza congelada",
-                    "points": 6
                 },
                 {
                     "desc": "Troba pasta penne.",
