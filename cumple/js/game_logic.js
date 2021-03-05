@@ -20,6 +20,11 @@ var dades = {
             "img-url":"images/supers/caprabo.png",
         },
         {
+            "nom":"Caprabo",
+            "unlock":80,
+            "img-url":"images/supers/caprabo.png",
+        },
+        {
             "nom":"Carrefour",
             "img-url":"images/supers/carrefour.png",
         },
@@ -99,7 +104,7 @@ var dades = {
             "desc": "Creu que la seva princesa té sempre raó.",
             "hab-lost":-2,
             "habilitats": [
-                "Només pot entrar al passadís de la neteja. ",
+                "Només pot entrar al passadís de la neteja, els perfums i la higiene en general. ",
                 "Va amb els guants de rentar plats posats.",
                 "Camina amb el cul apretat del mal que li fa."
             ]
@@ -122,8 +127,8 @@ var dades = {
             "desc": "El emancipao acaba de deixar el niu. No sap el que l'espera...",
             "hab-lost":-2,
             "habilitats": [
-                "Paga sempre i únicament amb bitllets de 10.",
-                "Deixa sempre 1 cosa a caixa perquè no li arriben els calés.",
+                "No pot triar res superior a 10 euros.",
+                "No en te ni pel ticket del pàrquing. (no pot utilitzar pàrquings de super)",
                 "Només pot seleccionar els productes més barats."
             ]
         },
@@ -134,8 +139,8 @@ var dades = {
             "hab-lost":-2,
             "habilitats": [
                 "Té pressa. No es pot estar parat més de 10 segons (tret de la cua).",
-                "Únicament pot anar pels passadissos on hi hagi café, xocolata, fideus instantanis i red bull. ",
-                "Un cop està a la cua canvia com a mínim 1 vegada cap a una caixa que li sembla més ràpida (si n’hi ha més d’una)"
+                "Únicament pot anar pels passadissos on hi hagi menjar ràpid o preparat i red bull.",
+                "Te tanta pressa que mai agafa el ticket de la caixera."
             ]
         },
         {
@@ -166,7 +171,7 @@ var dades = {
             "unlock":70,
             "img-url": "images/personatges/influencer.jpg",
             "desc": "La influencer es una estrella d'instagram i necessita cridar l'atenció per sobreviure.",
-            "hab-lost":-1,
+            "hab-lost":-2,
             "habilitats": [
                 "Cada vegada que entra a un super fa una review d’un producte com a mínim i la penja a instagram.",
                 "Es fa un selfie a costat de les amanides fent morritos (no la penja).",
@@ -180,8 +185,8 @@ var dades = {
             "hab-lost":-1,
             "habilitats": [
                 "Només pot seleccionar productes caducats o a punt de caducar (màxim 1 mes).",
-                "Apareix al super 15 minuts abans de que tanqui.",
-                "Diu que és vegana, així que pot mirar qualsevol producte que porti carn (independentment de la caducitat). No pot mirar les verdures."
+                "Apareix al super 30 minuts abans de que tanqui.",
+                "La seva hipocresia només li permet seleccionar aquells productes que diu que mai compra (broixeria, gelats, carn...). Res de coses sanes."
             ]
         },
         {
@@ -192,7 +197,7 @@ var dades = {
             "habilitats": [
                 "La maruja sempre mira les revistes del cor quan entra a un super (no les compra).",
                 "No es desinfecta les mans a l'entrar al super.",
-                "La maruja provoca que el caixer sempre li parli amb castellà"
+                "La maruja provoca que la caixera o caixer sempre li parli en castellà"
             ]
         },
         {
@@ -202,7 +207,7 @@ var dades = {
             "hab-lost":-2,
             "habilitats": [
                 "Si no troba el que vol en menys de dos minuts va a preguntar directament a un treballador.",
-                "Si no troba cap treballador en menys de dos minuts entra en pànic i abandona el supermercat.",
+                "El perdut es fa tots els passadissos del supermercat, sempre.",
                 "Si ha de comprar fruita, no pesa cap peça abans d’anar per caixa."
             ]
         },
@@ -210,7 +215,7 @@ var dades = {
             "nom": "Pija hippie", 
             "img-url": "images/personatges/hippie.jpg",
             "desc": "Adora els sers vius encara que el seu pare tingui un escorxador.",
-            "hab-lost":-2,
+            "hab-lost":-3,
             "habilitats": [
                 "Només pot mirar productes orgànics i bio.",
                 "Si ha de comprar carn, pregunta a la caixera si els animals han sigut feliços.",
@@ -223,7 +228,7 @@ var dades = {
             "desc": "La sana es llegeix totes les revistes de nutrició i es creu tot el que diuen, encara que es contradiguin.",
             "hab-lost":-2,
             "habilitats": [
-                "Es mira totes les etiquetes de les coses que agafa i diu en veu alta les calories.",
+                "No pot seleccionar res que porti més de 150 kcaloríes per 100 grams.",
                 "No pot entrar al passadís de les patates fregides, la brioixeria, l’alcohol, els gelats ni les xocolates ni xuxes.",
                 "No pot seleccionar cap producte que porti gluten."
             ]
@@ -269,7 +274,7 @@ var dades = {
             "unlock":25,
             "hab-lost":-3,
             "habilitats": [
-                "Graba tota la visita al super amb mòbil i fa reviews del que agafa.",
+                "Graba tota la visita al super amb mòbil i comenta la seva experiència.",
                 "Porta gorra.",
                 "El youtuber sempre demana likes davant les pizzes congelades."
             ]
@@ -372,11 +377,11 @@ var dades = {
                     "points": 5
                 },
                 {
-                    "desc": "Troba colonia nenuco",
+                    "desc": "Troba colonia nenuco.",
                     "points": 4
                 },
                 {
-                    "desc": "Troba esbergínia a més de 1.5 el kilo.",
+                    "desc": "Troba esbergínia a més de 1.5€ el kilo.",
                     "points": 6
                 },
                 {
@@ -424,7 +429,7 @@ var dades = {
                     "points": 6
                 },
                 {
-                    "desc": "Troba qualsevol moneda al terra d’un supermercat (no cal agafar-la).",
+                    "desc": "Troba qualsevol moneda al terra d’un supermercat o exteriors (no cal agafar-la).",
                     "points": 7
                 },
                 {
@@ -450,6 +455,10 @@ var dades = {
                 {
                     "desc": "Troba tint de cabell de color borgonya.",
                     "points": 7
+                },
+                {
+                    "desc": "Troba tofu bio.",
+                    "points": 5
                 },
                 {
                     "desc": "Troba un Iogurt de mig kilo.",
@@ -530,10 +539,6 @@ var dades = {
                 {
                     "desc": "Troba una burger vegetariana.",
                     "points": 4
-                },
-                {
-                    "desc": "Troba una cervesa fabricada a Igualada.",
-                    "points": 8
                 },
                 {
                     "desc": "Troba una especie a més de 3 euros",
@@ -641,10 +646,6 @@ var dades = {
                     "points": 15
                 },
                 {
-                    "desc": "Troba tofu bio.",
-                    "points": 15
-                },
-                {
                     "desc": "Troba un article amb data de caducitat dins de la setmana entrant.",
                     "points": 18
                 },
@@ -693,9 +694,17 @@ var dades = {
                     "points": 14
                 },
                 {
+                    "desc": "Troba una cervesa fabricada a Igualada.",
+                    "points": 16
+                },
+                {
                     "desc": "Troba white cookies i vengat del xavi.",
                     "points": 14
-                }   
+                },
+                {
+                    "desc": "Dóna'li a la caixera una targeta de client d’un altre super.",
+                    "points": 15
+                },                
             ]
         },
         {
@@ -713,10 +722,7 @@ var dades = {
                     "desc": "Cola un article del forn sense pagar per ell en una bossa que passis per caixa.",
                     "points": 40
                 },
-                {
-                    "desc": "Dóna'li a la caixera una targeta de client d’un altre super.",
-                    "points": 35
-                },
+                
                 {
                     "desc": "Pesa una bossa de fruita d’exactament 777 grams. Després deixa al seu lloc les coses que hi hagin dins.",
                     "points": 40
