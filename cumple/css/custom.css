@@ -48,6 +48,10 @@ div#marcador {
     z-index:999;
 }
 
+#marcador_text {
+    opacity:50%;
+}
+
 #myBtn {
   display: none;
   position: fixed;
