@@ -20,7 +20,7 @@ var dades = {
             "img-url":"images/supers/caprabo.png",
         },
         {
-            "nom":"Caprabo",
+            "nom":"Caprabo 2",
             "unlock":80,
             "img-url":"images/supers/caprabo.png",
         },
@@ -68,6 +68,11 @@ var dades = {
         },
         {
             "nom":"Altres",
+            "img-url":"images/supers/paquis.png",
+        },
+        {
+            "nom":"Altres 2",
+            "unlock": 90,
             "img-url":"images/supers/paquis.png",
         },
         {
