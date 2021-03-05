@@ -160,6 +160,17 @@ var dades = {
             ]
         },
         {
+            "nom": "Hombre de negocios", 
+            "img-url": "images/personatges/business.jpg",
+            "desc": "Comprar barat vendre car unga unga.",
+            "hab-lost":-3,
+            "habilitats": [
+                "El businessman només pot seleccionar productes en oferta.",
+                "El businessman posa a la venta el ticket de la peixeteria a instagram per 5 euros: ¿Cansat de fer cua?.",
+                "El businessman sempre roba bosses de plàstic per fer reventa."
+            ]
+        },
+        {
             "nom": "Iaia", 
             "img-url": "images/personatges/iaia.jpg",
             "desc": "La iaia només vol veure el col·lapsament del món i de les persones, i per això fa un tap.",
@@ -217,10 +228,22 @@ var dades = {
             ]
         },
         {
+            "nom": "Poli", 
+            "img-url": "images/personatges/poli.jpg",
+            "desc": "Emergència nacional! S'han acabat els pastissets a comissaría!.",
+            "hab-lost":-2,
+            "habilitats": [
+                "El poli sempre paga amb la targeta black del contribuent",
+                "El poli només pot entrar als passadissos de la broixeria, l'alcohol, els pastissos i les begudes ensucrades.",
+                "El poli no pot anar a un super més enllà de 500 metres de la comissaria."
+            ]
+        },
+        {
             "nom": "Pija hippie", 
             "img-url": "images/personatges/hippie.jpg",
             "desc": "Adora els sers vius encara que el seu pare tingui un escorxador.",
             "hab-lost":-3,
+            "unlock":95,
             "habilitats": [
                 "Només pot mirar productes orgànics i bio.",
                 "Si ha de comprar carn, pregunta a la caixera si els animals han sigut feliços.",
