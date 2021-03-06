@@ -110,7 +110,7 @@
                         {{#supermercats}}
                         <div class="col-sm-3 supermercat" {{#unlock}}unlock="{{.}}"{{/unlock}}>
                             <img src="{{img-url}}" alt="superimatge" class="img-responsive image-center">
-                            <h2 class="checkable text-center">{{nom}}</h2>
+                            <h2 class="checkable text-center {{#done}}checked{{/done}}">{{nom}}</h2>
                             <p class="text-center">{{#unlock}}({{unlock}} pts.){{/unlock}}</p>
                         </div>
                         {{/supermercats}}
@@ -130,7 +130,7 @@
                         {{#personatges}}
                         <div class="col-sm-4 personatge" {{#unlock}}unlock="{{.}}"{{/unlock}}>
                             <img src="{{img-url}}" alt="Personatge" class="img-responsive image-center">
-                            <h2 class="checkable text-center">{{nom}}</h2>
+                            <h2 class="checkable text-center {{#done}}checked{{/done}}">{{nom}}</h2>
                             <p>{{desc}}</p>
                             <p>Aquest personatge perd <b>{{hab-lost}} pts</b>. per cada característica no complerta.{{#unlock}} Aquest personatge es desbloqueja als <b>{{unlock}} pts.</b>{{/unlock}}</p>
                             <ul class="fh5co-check">
@@ -158,7 +158,7 @@
                                 <h2>{{nom}}</h2>
                                 <ul>
                                 {{#reptes}}
-                                    <li class="repte checkable" add-points={{points}}><b>{{points}} pts</b>: {{desc}}</li>
+                                    <li class="repte checkable {{#done}}checked{{/done}}" add-points={{points}}><b>{{points}} pts</b>: {{desc}}</li>
                                 {{/reptes}}
                                 </ul>
                             </div>

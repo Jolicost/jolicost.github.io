@@ -8,12 +8,14 @@ var dades = {
         {
             "nom":"BonÀrea",
             "img-url":"images/supers/bonarea.png",
-            "unlock":25
+            "unlock":25,
+            "done":1
         },
         {
             "nom":"BonPreu",
             "img-url":"images/supers/bonpreu.jpg",
-            "unlock":130
+            "unlock":130,
+            "done":1
         },
         {
             "nom":"Caprabo",
@@ -27,6 +29,7 @@ var dades = {
         {
             "nom":"Carrefour",
             "img-url":"images/supers/carrefour.png",
+            "done":1
         },
         {
             "nom":"Carrefour 2",
@@ -54,7 +57,8 @@ var dades = {
         {
             "nom":"Lidl",
             "img-url":"images/supers/lidl.png",
-            "unlock":65
+            "unlock":65,
+            "done":1
         },
         {
             "nom":"Lidl 2",
@@ -64,7 +68,8 @@ var dades = {
         {
             "nom":"Mercadona",
             "img-url":"images/supers/mercadona.jpg",
-            "unlock":65
+            "unlock":65,
+            "done":1
         },
         {
             "nom":"Altres",
@@ -131,6 +136,7 @@ var dades = {
             "img-url": "images/personatges/emancipao.jpg",
             "desc": "El emancipao acaba de deixar el niu. No sap el que l'espera...",
             "hab-lost":-2,
+            "done":1,
             "habilitats": [
                 "No pot triar res superior a 10 euros.",
                 "No en te ni pel ticket del pàrquing. (no pot utilitzar pàrquings de super)",
@@ -175,6 +181,7 @@ var dades = {
             "img-url": "images/personatges/iaia.jpg",
             "desc": "La iaia només vol veure el col·lapsament del món i de les persones, i per això fa un tap.",
             "hab-lost":-2,
+            "done":1,
             "unlock":25,
             "habilitats": [
                 "No pot superar els 2km/h durant tota la visita al super. Es controlarà la velocitat amb un GPS.",
@@ -199,6 +206,7 @@ var dades = {
             "img-url": "images/personatges/escombra.jpg",
             "desc": "Com estalviar en la teva compra pel preu d'una gastrointeritis.",
             "hab-lost":-1,
+            "done":1,
             "habilitats": [
                 "Només pot seleccionar productes caducats o a punt de caducar (màxim 1 mes).",
                 "Apareix al super 30 minuts abans de que tanqui.",
@@ -221,6 +229,7 @@ var dades = {
             "img-url": "images/personatges/naufrago.png",
             "desc": "Sembla que sigui la primera vegada que el perdut entra en un supermercat.",
             "hab-lost":-2,
+            "done":1,
             "habilitats": [
                 "Si no troba el que vol en menys de dos minuts va a preguntar directament a un treballador.",
                 "El perdut es fa tots els passadissos del supermercat, sempre.",
@@ -255,6 +264,7 @@ var dades = {
             "img-url": "images/personatges/sano.jpg",
             "desc": "La sana es llegeix totes les revistes de nutrició i es creu tot el que diuen, encara que es contradiguin.",
             "hab-lost":-2,
+            "done":1,
             "habilitats": [
                 "No pot seleccionar res que porti més de 150 kcaloríes per 100 grams.",
                 "No pot entrar al passadís de les patates fregides, la brioixeria, l’alcohol, els gelats ni les xocolates ni xuxes.",
@@ -314,7 +324,8 @@ var dades = {
             "reptes":[
                 {
                     "desc": "Agafa 10 bosses o més de verdures i quedateles.",
-                    "points": 6
+                    "points": 6,
+                    "done":1
                 },
                 {
                     "desc": "Agafa un ticket de la peixateria.",
@@ -330,19 +341,23 @@ var dades = {
                 },
                 {
                     "desc": "Entra al super amb una bossa de roba/plàstic d’un super diferent.",
-                    "points": 4
+                    "points": 4,
+                    "done":1
                 },
                 {
                     "desc": "Fes la ola davant de les catisfactions.",
-                    "points": 5
+                    "points": 5,
+                    "done": 1
                 },
                 {
                     "desc": "Fes una dansa de la felicitat en el passadís dels cereals. (mínim 5 segons).",
-                    "points": 7
+                    "points": 7,
+                    "done": 1
                 },
                 {
                     "desc": "Localitza un personatge del llistat de personatges que no sigui el normal.",
-                    "points": 6
+                    "points": 6,
+                    "done": 1
                 },
                 {
                     "desc": "Localitza una oferta 2x1.",
@@ -350,7 +365,8 @@ var dades = {
                 },
                 {
                     "desc": "Localitza una oferta 3x2.",
-                    "points": 4
+                    "points": 4,
+                    "done": 1
                 },
                 {
                     "desc": "Menja’t una xuxe davant de la fruita.",
@@ -358,11 +374,13 @@ var dades = {
                 },
                 {
                     "desc": "Obre una porta dels congelats sense fer contacte.",
-                    "points": 6
+                    "points": 6,
+                    "done": 1
                 },
                 {
                     "desc": "Plora davant de la ceba",
-                    "points": 6
+                    "points": 6,
+                    "done": 1
                 },
                 {
                     "desc": "Treu una fanta de taronja que formi part d’un pack 2x1 i passa-la per caixa.",
@@ -370,7 +388,8 @@ var dades = {
                 },
                 {
                     "desc": "Troba 400 g de nabius.",
-                    "points": 5
+                    "points": 5,
+                    "done": 1
                 },
                 {
                     "desc": "Troba M&M’s",
@@ -382,15 +401,18 @@ var dades = {
                 },
                 {
                     "desc": "Troba amanida florette.",
-                    "points": 5
+                    "points": 5,
+                    "done": 1
                 },
                 {
                     "desc": "Troba arròs de sushi",
-                    "points": 6
+                    "points": 6,
+                    "done": 1
                 },
                 {
                     "desc": "Troba bebida de soja con sabor chocolate.",
-                    "points": 7
+                    "points": 7,
+                    "done": 1
                 },
                 {
                     "desc": "Troba bitter kas.",
@@ -398,7 +420,8 @@ var dades = {
                 },
                 {
                     "desc": "Troba bolquers de 72 unitats o més.",
-                    "points": 6
+                    "points": 6,
+                    "done": 1
                 },
                 {
                     "desc": "Troba cibulé.",
@@ -410,11 +433,13 @@ var dades = {
                 },
                 {
                     "desc": "Troba esbergínia a més de 1.5€ el kilo.",
-                    "points": 6
+                    "points": 6,
+                    "done": 1
                 },
                 {
                     "desc": "Troba fideuà preparada.",
-                    "points": 6
+                    "points": 6,
+                    "done": 1
                 },
                 {
                     "desc": "Troba ginebra puerto de indias.",
@@ -422,7 +447,8 @@ var dades = {
                 },
                 {
                     "desc": "Troba haagen dazs sabor cheesecake.",
-                    "points": 6
+                    "points": 6,
+                    "done": 1
                 },
                 {
                     "desc": "Troba hamburguesa de conill",
@@ -430,7 +456,8 @@ var dades = {
                 },
                 {
                     "desc": "Troba maizena.",
-                    "points": 4
+                    "points": 4,
+                    "done": 1
                 },
                 {
                     "desc": "Troba mantega del cadí.",
@@ -438,15 +465,18 @@ var dades = {
                 },
                 {
                     "desc": "Troba mini cereals (25 gr).",
-                    "points": 7
+                    "points": 7,
+                    "done": 1
                 },
                 {
                     "desc": "Troba mini mandonguilles.",
-                    "points": 6
+                    "points": 6,
+                    "done": 1
                 },
                 {
                     "desc": "Troba mochis.",
-                    "points": 5
+                    "points": 5,
+                    "done": 1
                 },
                 {
                     "desc": "Troba paella de marisc congelada.",
@@ -454,7 +484,8 @@ var dades = {
                 },
                 {
                     "desc": "Troba pasta penne.",
-                    "points": 6
+                    "points": 6,
+                    "done": 1
                 },
                 {
                     "desc": "Troba qualsevol moneda al terra d’un supermercat o exteriors (no cal agafar-la).",
@@ -462,11 +493,13 @@ var dades = {
                 },
                 {
                     "desc": "Troba safrà",
-                    "points": 5
+                    "points": 5,
+                    "done": 1
                 },
                 {
                     "desc": "Troba salsa tàrtara.",
-                    "points": 5
+                    "points": 5,
+                    "done": 1
                 },
                 {
                     "desc": "Troba sangria don simon.",
@@ -478,7 +511,8 @@ var dades = {
                 },
                 {
                     "desc": "Troba sunny delight.",
-                    "points": 6
+                    "points": 6,
+                    "done": 1
                 },
                 {
                     "desc": "Troba tint de cabell de color borgonya.",
@@ -486,23 +520,28 @@ var dades = {
                 },
                 {
                     "desc": "Troba tofu bio.",
-                    "points": 5
+                    "points": 5,
+                    "done": 1
                 },
                 {
                     "desc": "Troba un Iogurt de mig kilo.",
-                    "points": 6
+                    "points": 6,
+                    "done": 1
                 },
                 {
                     "desc": "Troba un article amb un preu per L major que 45 eur.",
-                    "points": 7
+                    "points": 7,
+                    "done": 1
                 },
                 {
                     "desc": "Troba un article amb un preu per kg major que 45 eur.",
-                    "points": 7
+                    "points": 7,
+                    "done": 1
                 },
                 {
                     "desc": "Troba un article de frozen II.",
-                    "points": 5
+                    "points": 5,
+                    "done": 1
                 },
                 {
                     "desc": "Troba un carro (no pot ser teu) amb una ampolla de vi o cava.",
@@ -514,7 +553,8 @@ var dades = {
                 },
                 {
                     "desc": "Troba un maxi pavo (rotllo pavo 500 gr).",
-                    "points": 5
+                    "points": 5,
+                    "done": 1
                 },
                 {
                     "desc": "Troba un mini haagen dazs.",
@@ -522,23 +562,28 @@ var dades = {
                 },
                 {
                     "desc": "Troba un paquet de 1 KG de pasta.",
-                    "points": 5
+                    "points": 5,
+                    "done": 1
                 },
                 {
                     "desc": "Troba un paquet de llet a menys de 70 céntims el litro.",
-                    "points": 5
+                    "points": 5,
+                    "done": 1
                 },
                 {
                     "desc": "Troba un producte a menys de 0.2 euros el litre. ",
-                    "points": 5
+                    "points": 5,
+                    "done": 1
                 },
                 {
                     "desc": "Troba un producte a menys de 1 euro el kilo.",
-                    "points": 5
+                    "points": 5,
+                    "done": 1
                 },
                 {
                     "desc": "Troba un producte del forn amb un sol article restant.",
-                    "points": 5
+                    "points": 5,
+                    "done": 1
                 },
                 {
                     "desc": "Troba un ticket de super al terra (no cal agafar-lo).",
@@ -546,11 +591,13 @@ var dades = {
                 },
                 {
                     "desc": "Troba una Barra de pa a més de 1 euro.",
-                    "points": 6
+                    "points": 6,
+                    "done": 1
                 },
                 {
                     "desc": "Troba una caixa de cereals a més de 3 eur",
-                    "points": 5
+                    "points": 5,
+                    "done": 1
                 },
                 {
                     "desc": "Troba una Fanta de maracuya",
@@ -562,15 +609,18 @@ var dades = {
                 },
                 {
                     "desc": "Troba una burger vegana.",
-                    "points": 4
+                    "points": 4,
+                    "done": 1
                 },
                 {
                     "desc": "Troba una burger vegetariana.",
-                    "points": 4
+                    "points": 4,
+                    "done": 1
                 },
                 {
                     "desc": "Troba una especie a més de 3 euros",
-                    "points": 5
+                    "points": 5,
+                    "done": 1
                 },
                 {
                     "desc": "Troba una fanta de 50cl.",
@@ -582,7 +632,8 @@ var dades = {
                 },
                 {
                     "desc": "Troba una garrafa d'aigua a més de 2 euros.",
-                    "points": 4
+                    "points": 4,
+                    "done": 1
                 },
                 {
                     "desc": "Troba una oferta del segon producte al -60% com a mínim.",
@@ -590,19 +641,23 @@ var dades = {
                 },
                 {
                     "desc": "Troba una revista del corazón.",
-                    "points": 4
+                    "points": 4,
+                    "done": 1
                 },
                 {
                     "desc": "Troba una safata de shitake (sense mescles)",
-                    "points": 5
+                    "points": 5,
+                    "done": 1
                 },
                 {
                     "desc": "Troba una salsa barbacoa de més de 2 euros.",
-                    "points": 5
+                    "points": 5,
+                    "done": 1
                 },
                 {
                     "desc": "Troba unes patates fregides a més de 2 euros la bossa.",
-                    "points": 5
+                    "points": 5,
+                    "done": 1
                 },
                 {
                     "desc": "Troba xocolata de 90% de cacao o més",
@@ -623,11 +678,13 @@ var dades = {
                 },
                 {
                     "desc": "Fes el saludo nipon davant de la parada de sushi.",
-                    "points": 14
+                    "points": 14,
+                    "done": 1
                 },
                 {
                     "desc": "Fes la dansa de la felicitat davant d’una càmera de vigilància (mínim 5 segons).",
-                    "points": 17
+                    "points": 17,
+                    "done": 1
                 },
                 {
                     "desc": "Fes que algú t’obri la porta d’una nevera i agafa un article de dins (després es pot deixar)",
@@ -643,7 +700,8 @@ var dades = {
                 },
                 {
                     "desc": "Obre una porta dels congelats sense fer contacte utilitzant un producte del mateix super (després el pots deixar)",
-                    "points": 13
+                    "points": 13,
+                    "done": 1
                 },
                 {
                     "desc": "Paga un article amb 1 cèntim de mes i digues: queda't el canvi.",
@@ -663,7 +721,8 @@ var dades = {
                 },
                 {
                     "desc": "Troba bebida de avellanas.",
-                    "points": 15
+                    "points": 15,
+                    "done": 1
                 },
                 {
                     "desc": "Troba cuixes de granota.",
@@ -671,7 +730,8 @@ var dades = {
                 },
                 {
                     "desc": "Troba pasta de llenties vermelles.",
-                    "points": 15
+                    "points": 15,
+                    "done": 1
                 },
                 {
                     "desc": "Troba un article amb data de caducitat dins de la setmana entrant.",
@@ -715,7 +775,8 @@ var dades = {
                 },
                 {
                     "desc": "Troba un vi de més de 15 euros per litre.",
-                    "points": 16
+                    "points": 16,
+                    "done": 1
                 },
                 {
                     "desc": "Troba una etiqueta de preu d’article al terra.",
@@ -723,7 +784,8 @@ var dades = {
                 },
                 {
                     "desc": "Troba una cervesa fabricada a Igualada.",
-                    "points": 16
+                    "points": 16,
+                    "done": 1
                 },
                 {
                     "desc": "Troba white cookies i vengat del xavi.",
@@ -753,7 +815,8 @@ var dades = {
                 
                 {
                     "desc": "Pesa una bossa de fruita d’exactament 777 grams. Després deixa al seu lloc les coses que hi hagin dins.",
-                    "points": 40
+                    "points": 40,
+                    "done": 1
                 },
                 {
                     "desc": "Pregunta a un treballador quin és el passadís més maco.",
@@ -781,7 +844,8 @@ var dades = {
                 },
                 {
                     "desc": "Troba un article que costi més de 50 eur",
-                    "points": 35
+                    "points": 35,
+                    "done": 1
                 },
                 {
                     "desc": "Troba un empleat amb un tatuatge.",
@@ -872,6 +936,7 @@ function renderLogic() {
   addCheckableLogic();
   checkLocked();
   renderButton();
+  refreshPoints();
 }
 
 function renderButton() {
