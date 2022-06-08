@@ -1,0 +1,167 @@
+<!--doctype html-->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>Which traffic accidents are serious or fatal in England?</title>
+	<meta name="description" content="United Kingdom accidents (2010-2014) visualization">
+	<meta name="author" content="Jolivaco">
+
+	<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="loader.css">
+    <link rel="icon" type="image/png" href="favicon.png" />
+	<!--Fonts-->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+	<!-- Load d3.js -->
+	<script src="https://d3js.org/d3.v4.js"></script>
+	<script src="scripts/svg-inject.min.js"></script>
+    <script src="scripts/loadSVGs.js"></script>
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+   
+   
+</head>
+
+<body>
+    <div id="loading_screen" class="loading"></div>
+    <div id="legend">
+        <button id="hide_legend_btn" onclick="hideLegend()">hide</button>
+        <p>50%</p>
+        <div id="legend_bar"></div>
+        <p> 0%</p>
+    </div>
+    <div id="hidden_popup">
+        <div id="popup_piechart">
+            <svg>
+                <g>
+                </g>
+            </svg>
+        </div>
+        <div id="popup_info">
+            <p><b id="popup_title">title</b></p>
+            <p><b id="popup_total_accidents">100000</b> total accidents</p>
+            <p><b id="popup_major_accidents">5000</b> major accidents</p>
+            <p><b id="popup_severity_index">10%</b> severity index</p>
+        </div>
+    </div>
+    <div id="icon_popup">
+        <b id="popup_class_name">Class name</b>
+    </div>
+	<div id="container">
+        <div class="text_wrapper">
+            <h1>Which traffic accidents are serious or fatal in England?</h1>
+            <p>Not every traffic accident ends up being fatal or serious. Knowing the most important factors can be decisive to prevent a major accident.</p>
+            <p>This visualization makes use of the data published by the department of transport of the United Kingdom. The data includes the accidents from the 2010 to 2014 period.</p>
+            <p>There was a total of <b id="total_accidents">100000</b> accidents. Out of these, <b id="major_accidents_total">50000</b> were considered major (they resulted in fatal or serious consequences).</p>
+            <p>This means that <b id="major_percent">33%</b> of the accidents were considered major. This metric will be known as <b>severity index</b> from now on.</p>
+            <p>You can visualize how this index helps to determine which factors are more dangerous than others. Try to compare the severity index between <b>motorcycles</b> and <b>4-wheelers</b> vehicle categories. Which vehicle category do you think is more dangerous?</p>
+        </div>
+		<div id="plot_vehiclecategory">
+			<div id="VehicleCategoryViz"></div>
+		</div>
+        <div class="text_wrapper">
+            <p>Exactly, <b>motorcycle</b> accidents are way more dangerous than all the other kinds of vehicles. The main reason is the lack of protection and security measures.</p>
+            <p>What can you do as a driver to prevent this kind of accidents? There are <b>four</b> crucial factors that influence the severity of an accident.</p>
+            <p>These factors are, the <b>type of the vehicle</b> as we just saw, <b>the manoeuvre</b> taken by the vehicle during the accident, the <b>type of intersection</b> where the accident took place, and the <b>point of impact</b> of the vehicle.</p>
+            <p>Let's take a look at these three last factors. Which ones are the most dangerous?</p>
+        </div>
+		<div id="maneuver_intersection_container">
+			<div id="plot_maneuver">
+				<h2>Manoeuvre</h2>
+                <p>The manoeuvre is the second most important factor that leads to major accidents. Overtaking is the most dangerous manoeuvre.</p>
+				<div id="VehicleManoeuverViz"></div>
+			</div>
+			<div id="plot_intersection">
+				<h2>Intersection</h2>
+                <p>The intersection type follows the manoeuvre. In this case, a straight road is the most dangerous.</p>
+				<div id="IntersectionViz"></div>
+			</div>
+		</div>
+		<div id="plot_impactpoint">
+			<h2>Point of impact</h2>
+            <p>Finally, the impact point of the accident also matters. Major accidents tend to happen without any kind of impact with another vehicle. In the other way, when the vehicle impacts on its back, the accident is way less harmful.</p>
+			<div id="ImpactViz">
+            </div>
+		</div>
+        <div class="text_wrapper">
+            <p>However, your personal situation matters. The severity of the accidents also depends on other factors which are not directly related to the <b>road</b>.</p>
+            <p>Use the following filters to <b>select your personal case</b> and find out which manoeuvres, intersections and impact points become more relevant.</p>
+        </div>
+		<div id="filters_container">
+			<div id="plot_hour">
+				<h2>Hour</h2>
+                <div id="hour_am_viz"></div>
+				<div id="hour_pm_viz"></div>
+			</div>
+			<div id="plot_weekday">
+				<h2>Weekday</h2>
+				<div id="WeekdayViz"></div>
+			</div>
+			<div id="plot_vehicle">
+				<h2>Vehicle</h2>
+				<div id="VehicleViz">
+                    <div id="Car">
+                        <img src="icons/vehicle_filter/sedan-car-model.svg" onload="onLoadSVG(this);"/>
+                    </div>
+                    <div id="Motorcycle">
+                        <img src="icons/vehicle_filter/motorcycle.svg" onload="onLoadSVG(this);"/>
+                    </div>
+                    <div id="Van">
+                        <img src="icons/vehicle_filter/van.svg" onload="onLoadSVG(this);"/>
+                    </div>
+                    <div id="Bus/minibus">
+                        <img src="icons/vehicle_filter/taxi.svg" onload="onLoadSVG(this);"/>
+                    </div>
+                    <div id="Taxi">
+                        <img src="icons/vehicle_filter/bus.svg" onload="onLoadSVG(this);"/>
+                    </div>
+                    <div id="Other">
+                        <img src="icons/vehicle_filter/other.svg" onload="onLoadSVG(this);"/>
+                    </div>
+                </div>
+			</div>
+			<div id="plot_age">
+				<h2>Age</h2>
+				<div id="AgeViz"></div>
+			</div>
+		</div>
+        <div id="filters_actions_div">
+            <button class="carviz_btn" onclick="resetFilters();">Reset filters</button>
+            <button class="carviz_btn" onclick="window.location.href='#maneuver_intersection_container'">Back to top</button>
+        </div>
+        <div class="text_wrapper">
+            <p>Finally, you should observe <b>where did major accidents</b> happen. Try to input a <b>route</b> between two places in England and check out the location and details of the major accidents that happened in the path.</p>
+        </div>
+		<div id="map_container">
+			<div id="map_input">
+				<div id="map_input_placeholder">
+					<div id="input_origin">
+						<p><b>Origin</b></p>
+						<input id="input_origin_control" class="input_place" type="text"/>
+					</div>	
+					<div id="input_dest">
+						<p><b>Destination</b></p>
+						<input id="input_dest_control" class="input_place" type="text"/>
+					</div>
+                    <div id="input_submit">
+                        <button class="carviz_btn" id="input_submit_btn" onclick="updateMap();">Submit</button>
+                    </div>
+				</div>
+			</div>
+			<div id="map">
+				
+			</div>
+		</div>
+	</div>
+    <div id="footer">
+        <p id="footer-text">Special thanks to Freepik for their wonderful work on the icons that were used in this project.</p>
+    </div>
+	<script src="script.js"></script>
+</body>
+</html>
